@@ -11,6 +11,7 @@
 """
 import requests
 
+
 class SolusVM:
     def __init__(self, base_url, api_id, api_key):
         """SolusVM JSON API Library constructor.
@@ -35,12 +36,12 @@ class SolusVM:
             json
         """
         kwargs.update({
-                'rdtype':'json',
-                'id':self.id,
-                'key':self.key
+            'rdtype': 'json',
+            'id': self.id,
+            'key': self.key
         })
 
-        response = requests.get('https://'+self.base_url+':5656/api/admin/command.php', params=kwargs, timeout=2)
+        response = requests.get('https://' + self.base_url + ':5656/api/admin/command.php', params=kwargs, timeout=2)
         return response.json()
 
     def listVirtualServers(self, nodeid):
@@ -132,7 +133,7 @@ class SolusVM:
         return self._sQuery({
             'action': 'vserver-pae',
             'vserverid': vserverid,
-            'pae':pae
+            'pae': pae
         })
 
     def shutdownVirtualServer(self, vserverid):
@@ -211,7 +212,7 @@ class SolusVM:
         """
         return self._sQuery({
             'action': 'vserver-suspend',
-            'vserverid':vserverid
+            'vserverid': vserverid
         })
 
     def unsuspendVirtualServer(self, vserverid):
@@ -441,7 +442,7 @@ class SolusVM:
         return self._sQuery({
             'action': 'vserver-change',
             'vserverid': vserverid,
-            'plan':plan
+            'plan': plan
         })
 
     def changeOwner(self, vserverid, clientid):
@@ -477,7 +478,6 @@ class SolusVM:
             'vserverid': vserverid,
             'bootorder': bootorder
         })
-
 
     def changeBandwidthLimits(self, vserverid, limit, overlimit):
         """Changes specified virtual server's bandwidth limits.
@@ -548,7 +548,6 @@ class SolusVM:
             'vserverid': vserverid,
             'hdd': hdd,
         })
-
 
     def addIPAddress(self, vserverid):
         """Adds an IP address to specified virtual server.
@@ -831,7 +830,7 @@ class SolusVM:
             json
         """
         return self._sQuery({
-            'action':'client-list'
+            'action': 'client-list'
         })
 
     def deleteClient(self, username):
@@ -908,7 +907,7 @@ class SolusVM:
             json
         """
         return self._sQuery({
-            'action':'reseller-list'
+            'action': 'reseller-list'
         })
 
     def createReseller(self, kwargs):
