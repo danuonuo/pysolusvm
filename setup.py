@@ -4,7 +4,7 @@ from setuptools import setup
 setup(
     name='pysolusvm',
     version='1.0',
-    author='Nathan Lopez',
+    author='Nathan Lopez,improved by Danuonuo',
     author_email='contact@lopeznathan.com',
     description='Python SolusVM API',
     url='https://github.com/LopezNathan/pysolusvm',
