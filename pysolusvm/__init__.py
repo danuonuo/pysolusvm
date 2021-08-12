@@ -3,7 +3,7 @@
 
         https://documentation.solusvm.com/display/DOCS/API
 
-    @author     Benton Snyder
+    @author     Benton Snyder and Danuonuo
     @website    http://bensnyde.me
     @email      benton@bensnyde.me
     @created    7/24/13
