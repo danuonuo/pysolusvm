@@ -41,7 +41,7 @@ class SolusVM:
             'key': self.key
         })
 
-        response = requests.get('https://' + self.base_url + ':5656/api/admin/command.php', params=kwargs, timeout=2, verify = False)
+        response = requests.get('https://' + self.base_url + ':5656/api/admin/command.php', params=kwargs, timeout=5, verify = False)
         return response.json()
 
     def listVirtualServers(self, nodeid):
